@@ -1,0 +1,231 @@
+/* ===== Global Styles ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin:40px 0;
+}
+
+/* ===== Header ===== */
+
+.header{
+background:#0a3d62;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.nav ul{
+display:flex;
+list-style:none;
+}
+
+.nav ul li{
+margin-left:20px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+}
+
+.nav a:hover{
+color:#f1c40f;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* ===== Hero ===== */
+
+.hero{
+background:url("https://picsum.photos/1600/800") center/cover;
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.btn{
+display:inline-block;
+background:#f1c40f;
+padding:10px 20px;
+margin-top:15px;
+text-decoration:none;
+color:black;
+transition:.3s;
+}
+
+.btn:hover{
+background:#f39c12;
+}
+
+/* ===== About ===== */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+}
+
+/* ===== Courses ===== */
+
+.courses{
+background:#f5f5f5;
+padding:40px 0;
+}
+
+.course-grid{
+display:grid;
+gap:20px;
+}
+
+.course-card{
+background:white;
+padding:20px;
+text-align:center;
+transition:.3s;
+}
+
+.course-card:hover{
+transform:translateY(-5px);
+}
+
+/* ===== Teachers ===== */
+
+.teacher-grid{
+display:grid;
+gap:20px;
+}
+
+.teacher-card{
+text-align:center;
+}
+
+/* ===== Gallery ===== */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+}
+
+/* ===== Blog ===== */
+
+.blog-grid{
+display:grid;
+gap:20px;
+}
+
+/* ===== Contact ===== */
+
+.contact{
+background:#f5f5f5;
+padding:40px 0;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:10px;
+}
+
+/* ===== Footer ===== */
+
+.footer{
+background:#0a3d62;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* ===== Tablet ===== */
+
+@media(min-width:768px){
+
+.about-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.course-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.teacher-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.gallery-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.blog-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ===== Mobile Menu ===== */
+
+@media(max-width:768px){
+
+.nav{
+display:none;
+}
+
+.nav.active{
+display:block;
+position:absolute;
+background:#0a3d62;
+top:60px;
+width:100%;
+}
+
+.nav ul{
+flex-direction:column;
+text-align:center;
+}
+
+.menu-toggle{
+display:block;
+}
+
+}
